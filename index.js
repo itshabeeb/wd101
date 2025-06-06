@@ -1,4 +1,3 @@
-// Helper to calculate age from DOB
 function calculateAge(dob) {
   const birthDate = new Date(dob);
   const today = new Date();
@@ -45,7 +44,6 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     return;
   }
 
-  // Validate age
   const age = calculateAge(dob);
   if (age < 18 || age > 55) {
     errorDiv.textContent = 'Age must be between 18 and 55 years.';
@@ -53,18 +51,13 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     return;
   }
 
-  // Save to localStorage
   const entry = { name, email, password, dob, acceptTerms };
   let registrations = JSON.parse(localStorage.getItem('registrations') || '[]');
   registrations.push(entry);
   localStorage.setItem('registrations', JSON.stringify(registrations));
 
-  // Reset form
   this.reset();
-
-  // Update table
   loadTable();
 });
 
-// Initial table load
 loadTable();
