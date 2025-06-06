@@ -20,7 +20,7 @@ function loadTable() {
       <td>${entry.email}</td>
       <td>${entry.password}</td>
       <td>${entry.dob}</td>
-      <td>${entry.acceptTerms ? 'Yes' : 'No'}</td>
+      <td>${entry.acceptTerms === true ? 'true' : 'false'}</td>
     `;
     tbody.appendChild(tr);
   });
