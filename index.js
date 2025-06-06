@@ -1,4 +1,3 @@
-
 // Helper to calculate age from DOB
 function calculateAge(dob) {
   const birthDate = new Date(dob);
@@ -20,6 +19,7 @@ function loadTable() {
     tr.innerHTML = `
       <td>${entry.name}</td>
       <td>${entry.email}</td>
+      <td>${entry.password}</td>
       <td>${entry.dob}</td>
       <td>${entry.acceptTerms ? 'Yes' : 'No'}</td>
     `;
@@ -54,7 +54,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   }
 
   // Save to localStorage
-  const entry = { name, email, dob, acceptTerms };
+  const entry = { name, email, password, dob, acceptTerms };
   let registrations = JSON.parse(localStorage.getItem('registrations') || '[]');
   registrations.push(entry);
   localStorage.setItem('registrations', JSON.stringify(registrations));
