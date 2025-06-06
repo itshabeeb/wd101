@@ -46,6 +46,14 @@ form button {
 form button:hover {
   background: #0056b3;
 }
+.error {
+  color: #d8000c;
+  background: #ffd2d2;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 table {
   width: 100%;
   border-collapse: collapse;
