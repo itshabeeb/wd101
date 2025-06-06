@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="style.css">
-
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.html">Homepage</a>
-    <h1>About Me</h1>
-    
-    <p>My name is Habeeb, and I am a web developer.</p>
-    <p>I love creating beautiful and functional websites.</p>
-</body> 
+  <div class="container">
+    <form id="registrationForm" autocomplete="off">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+      <label for="acceptTerms">Accept Terms & Conditions</label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>DOB</th>
+          <th>Accepted Terms</th>
+        </tr>
+      </thead>
+      <tbody>
+ 
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
